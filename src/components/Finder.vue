@@ -3,7 +3,8 @@
     <label
       class="w-16 h-16 text-6xl rounded-full text-gray-200 flex flex-col justify-center items-center bg-blue-500 text-blue rounded-lg shadow-lg  uppercase border border-blue cursor-pointer hover:bg-blue hover:text-gray-800"
     >
-      + <input type="file" @change="selectFile" class="hidden" />
+      <v-icon name="plus"></v-icon>
+      <input type="file" @change="selectFile" class="hidden" />
     </label>
     <span class="m-2 font-mono font-semibold">Choose a file</span>
     <button
@@ -22,8 +23,8 @@ export default {
     selectFile() {
       this.$store.dispatch("fileSelect");
     },
-    upload(){
-      this.$store.dispatch("uploadFile")
+    upload() {
+      this.$store.dispatch("uploadFile");
     }
   }
 };

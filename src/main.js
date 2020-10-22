@@ -5,8 +5,10 @@ import "./assets/tailwind.css";
 import store from "./store";
 
 import vPlayBack from "v-playback";
+import feather from "vue-icon";
 
 Vue.use(vPlayBack);
+Vue.use(feather, "v-icon");
 
 Vue.config.productionTip = false;
 
