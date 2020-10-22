@@ -22,7 +22,6 @@ export default new Vuex.Store({
     UPLOAD_FILE(state, { anime, preview }) {
       state.anime = anime;
       state.preview = preview;
-      console.log(anime);
     },
   },
   actions: {
