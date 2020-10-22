@@ -1,5 +1,8 @@
 # find_anime
-
+#Basic usage
+```
+Upload a photo with the anime scene that you want to find...and let the magic happen.
+```
 ## Project setup
 ```
 npm install
