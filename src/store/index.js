@@ -30,16 +30,14 @@ export default new Vuex.Store({
     },
     uploadFile(context) {
       let image = context.state.selectedFile;
-
       let data = new FormData();
       data.append("image", image);
-      axios.post("https://trace.moe/api/search", data).then((res) => {
-        let anime = res.data.docs[0];
-        let preview = `https://media.trace.moe/video/${
-          anime.anilist_id
-        }/${encodeURIComponent(anime.filename)}?t=${anime.at}&token=${
-          anime.tokenthumb
-        }`;
+    
+      axios.post("https://api.trace.moe/search", data).then(async(res) => {
+       
+        let anime = await res.data.result[0];
+        console.log(anime);
+        let preview = anime.video
         context.commit("UPLOAD_FILE", { anime, preview });
       });
     },

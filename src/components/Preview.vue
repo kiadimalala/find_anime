@@ -13,7 +13,7 @@
         <h1
           class="text-lg font-bold font-mono px-1 text-left border-b-2 border-gray-800"
         >
-          Title : {{ anime.title_english }}
+          Title : {{ anime.filename }}
         </h1>
         <div class="preview__details flex my-1 justify-around  px-1">
           <h1 v-if="anime.episode" class="font-mono text-sm font-bold">
